@@ -6,11 +6,13 @@ import org.hibernate.annotations.NaturalId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class ToDoItem {
 
     private Long id;
+    @NotBlank
     private String title;
     private boolean done;
 
